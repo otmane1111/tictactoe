@@ -1,8 +1,8 @@
-
 // src/pages/index.js
 
 import React from "react";
 import LoginForm from "../components/LoginForm";
+import SignUpForm from "../components/SignupForm"; // Importez le composant SignUp ici
 // import "./styles.css"; // Importez le fichier CSS ici
 
 const IndexPage = () => {
@@ -15,23 +15,11 @@ const IndexPage = () => {
           <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#login">Log In</a></li>
+          <li><a href="#signup">Sign Up</a></li> {/* Ajoutez le lien vers la section d'inscription */}
         </ul>
       </nav>
       <section id="home" className="home-section">
-        <div className="welcome-text">
-          <h2>Welcome to Tic-Tac-Toe!</h2>
-          <p>
-            Tic-Tac-Toe, or Morpion, is a classic two-player game played on a 3x3 grid. Players take turns placing their symbols (usually "X" or "O") on the board with the aim of forming a line of three of their symbols either horizontally, vertically, or diagonally.
-          </p>
-          <h3>How to Play:</h3>
-          <ul>
-            <li><strong>Game Board:</strong> Start with an empty 3x3 grid.</li>
-            <li><strong>Turns:</strong> Players alternate turns placing their symbols on empty spaces.</li>
-            <li><strong>Objective:</strong> Form a line of three identical symbols.</li>
-            <li><strong>Winning:</strong> The first player to achieve a line wins the game!</li>
-            <li><strong>Draw:</strong> If the board is filled and no player has a line, the game is a draw.</li>
-          </ul>
-        </div>
+        {/* Contenu de la section Home */}
       </section>
       <section id="about">
         {/* Contenu de la section About */}
@@ -45,8 +33,11 @@ const IndexPage = () => {
       <section id="login">
         <LoginForm />
       </section>
+      <section id="signup">
+        <SignUpForm />
+      </section>
     </div>
   );
 };
 
-export default IndexPage
+export default IndexPage;
